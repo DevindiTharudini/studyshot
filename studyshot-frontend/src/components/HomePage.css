@@ -1,0 +1,576 @@
+/* General styles for the homepage */
+.homepage-container {
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+  color: white;  /* Ensuring all text in the hero section is white */
+  text-align: center;
+  padding: 200px 20px;  /* Increased padding for a bigger hero section */
+}
+
+.hero-section h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease; /* Add transition for smooth scaling */
+  color: white; /* Ensure the color stays white for the heading */
+}
+
+.hero-section h1:hover {
+  color: white; /* Ensure the color remains white when hovered */
+  transform: scale(1.1);  /* Scale up when hovered (pop effect) */
+}
+
+.hero-section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Enhanced Modern Gradient Button Styles */
+.cta-button {
+  background: linear-gradient(45deg, #FF6F61, #FF4F42, #FF3B2D); /* Bolder multi-color gradient */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 30px;  /* Curved edges */
+  transition: all 0.4s ease; /* Smooth transition for hover effects */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  margin-right: 15px; /* Space between buttons */
+  text-transform: uppercase; /* Capitalize the text for a modern touch */
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3); /* Light shine effect */
+  transform: rotate(45deg);
+  animation: shine 1s infinite linear;
+}
+
+.cta-button:hover {
+  background: linear-gradient(45deg, #FF4F42, #FF6F61, #FF3B2D); /* Slightly reversed gradient on hover */
+  transform: translateY(-4px); /* Slightly raise the button on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+  opacity: 0.9; /* Slightly fade the button */
+}
+
+.cta-button:focus {
+  outline: none; /* Remove focus outline */
+}
+
+/* Active State for "Try Now", "Learn More", "Register", and "Login" buttons */
+.cta-button:active {
+  background-color: #C84D3E !important; /* Solid color when clicked */
+  transform: translateY(2px); /* Simulate button press */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Reduced shadow to indicate click */
+}
+
+/* Shine effect */
+@keyframes shine {
+  0% {
+    left: -150%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+/* Smart Assessments Section */
+.smart-assessments {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: #F9F9F9;
+}
+
+.smart-assessments .section-img {
+  width: 50%;
+    width: 50%;
+    max-width: 500px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition on hover */
+    border-radius: 15px;  /* Rounded corners for a modern look */
+    background-size: cover;
+    background-position: center;
+}
+.smart-assessments .section-img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  filter: brightness(0.85); /* Dim the image slightly to enhance text readability */
+}
+.smart-assessments .section-text {
+  width: 45%;
+}
+
+.smart-assessments h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Dropdown shadow on main titles */
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.smart-assessments h2:hover {
+  color: #FF6F61; /* Change color when hovered */
+  transform: scale(1.1);  /* Scale up when hovered (pop effect) */
+}
+
+.smart-assessments p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #666; /* Reduced color for subtitles */
+}
+
+/* Progress Section */
+.progress-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: #fff;
+  flex-direction: row-reverse;
+}
+
+.progress-section .section-img {
+  width: 50%;
+  max-width: 500px;
+    width: 50%;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition on hover */
+    border-radius: 15px;  /* Rounded corners for a modern look */
+    background-size: cover;
+    background-position: center;
+    
+    
+}
+.progress-section .section-img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  filter: brightness(0.85); /* Dim the image slightly to enhance text readability */
+}
+
+.progress-section .section-text {
+  width: 45%;
+}
+
+.progress-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Dropdown shadow on main titles */
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.progress-section h2:hover {
+  color: #FF6F61; /* Change color when hovered */
+  transform: scale(1.1);  /* Scale up when hovered (pop effect) */
+}
+
+.progress-section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #666; /* Reduced color for subtitles */
+}
+/* Why Choose StudyShot Section */
+.why-choose-studyshot {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #fff6e5;  /* Light cream background */
+  margin-top: 40px; /* Space before the section */
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.why-choose-studyshot h2 {
+  font-size: 3.2em;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase; /* Modern, bold text styling */
+  letter-spacing: 2px; /* Add spacing between letters */
+  display: flex; /* Using flex to control the "Study" and "Shot" part separately */
+  justify-content: center; /* Center the text */
+  align-items: center;
+  position: relative;
+  animation: textReveal 1s ease-out forwards, scaleUp 0.6s ease-out forwards, slideIn 1s ease-out forwards; /* Added slide-in animation */
+  color: transparent; /* Text color transparent to allow shadow to show */
+  background-image: linear-gradient(135deg, #000000 0%, #FF6F3D 100%); /* Gradient for text */
+  -webkit-background-clip: text; /* Safari/Chrome */
+  background-clip: text; /* Standard background clip for text */
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3); /* Soft shadow behind text */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* "Study" part of the heading (Black Text) */
+.why-choose-studyshot h2 .study {
+  color: #000000;  /* Study part in black */
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-50px) scale(0.5); /* Start translated and scaled down */
+  animation: textPopUp 0.6s ease-out forwards 0.3s; /* Pop-up effect for "Study" */
+}
+
+/* "Shot" part of the heading (Orange Text) */
+.why-choose-studyshot h2 .shot {
+  color: #FF6F3D;  /* Shot part in orange */
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(50px) scale(0.5); /* Start translated and scaled down */
+  animation: textPopUp 0.6s ease-out forwards 0.6s; /* Pop-up effect for "Shot" */
+}
+
+/* Pop-up animation for "Study" and "Shot" */
+@keyframes textPopUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation for text reveal */
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-in animation for the whole "Why Choose StudyShot?" heading */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); /* Starts from top */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Ends at normal position */
+  }
+}
+
+/* Slide-out animation for the whole "Why Choose StudyShot?" heading */
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50px); /* Moves out to bottom */
+  }
+}
+
+/* Hover effect for "Why Choose StudyShot?" - Moves up and down */
+.why-choose-studyshot h2:hover {
+  animation: bounceUpDown 1s ease-in-out infinite; /* Add bounce effect on hover */
+}
+
+/* Bounce Up and Down Animation */
+@keyframes bounceUpDown {
+  0% {
+    transform: translateY(0); /* Start at normal position */
+  }
+  25% {
+    transform: translateY(-10px); /* Move up */
+  }
+  50% {
+    transform: translateY(0); /* Return to normal position */
+  }
+  75% {
+    transform: translateY(10px); /* Move down */
+  }
+  100% {
+    transform: translateY(0); /* Return to normal position */
+  }
+}
+
+/* Fade-in effect for cards */
+@keyframes fadeInCards {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Slide-up effect for cards */
+@keyframes cardSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.why-choose-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: nowrap;
+  margin-top: 40px;
+}
+
+.why-choose-card {
+  width: 32%;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+}
+
+.why-choose-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-overlay {
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay for readability */
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.why-choose-card h3 {
+  font-size: 1.5em;
+  color: #fff;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.why-choose-card p {
+  font-size: 1em;
+  color: #eee;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* "What Our Students Say" Section */
+.what-our-students-say {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f9f9f9;  /* Light background color */
+  margin-top: 40px;  /* Space before the section */
+}
+
+.what-our-students-say h2 {
+  font-size: 3.2em;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: nowrap;  /* Keep cards in a single line */
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.testimonial-card {
+  width: 30%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: cardSlideUp 0.7s ease-out forwards;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px); /* Lift effect */
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.testimonial-card .user-initials {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #FF6F3D;  /* Use the brand color */
+  margin-bottom: 10px;
+}
+
+.testimonial-card .user-name {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.testimonial-card .rating {
+  font-size: 1.5em;
+  color: #FF6F3D;
+  margin-bottom: 20px;
+}
+
+.testimonial-card .quote {
+  font-size: 1.1em;
+  color: #666;
+  font-style: italic;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+} 
+
+/* Enhanced background tile styling */
+.tile-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-attachment: fixed; /* Prevents jittery movement */
+}
+
+/* Prevent image from shifting on hover */
+.tile-bg:hover {
+  transform: scale(1.02); /* Slight lift only */
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Text container overlay to enhance readability */
+.tile-bg h3,
+.tile-bg p {
+  background: rgba(0, 0, 0, 0.6);  /* Darker transparent background */
+  padding: 12px 15px;
+  margin: 5px 20px;
+  border-radius: 10px;
+  color: #fff;
+  z-index: 2;
+}
+
+ /*Video Section Styles */
+
+.video-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  background-color: #fdfdfd;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.video-section h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #222;
+  max-width: 500px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.video-section h2:hover {
+  color: #FF6F3D;
+  transform: translateY(-3px);
+}
+
+.promo-video {
+  width: 620px;           /* Slightly larger */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive: stack vertically on smaller screens */
+@media (max-width: 900px) {
+  .video-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .promo-video {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .video-section h2 {
+    max-width: none;
+    font-size: 2rem;
+  }
+}
+.video-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #fff5cc, #ffe0e9); /* Light yellow to light pink */
+  border-radius: 20px;
+  margin: 60px 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,269 @@
+/* Quiz Page */
+.quiz-page {
+  padding: 60px 40px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.quiz-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.quiz-container h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: left;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.quiz-container h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #ff6f61;
+  margin-top: 8px;
+}
+
+.quiz-container h1 span {
+  display: block;
+}
+
+.quiz-container p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  color: #ff3b3b;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Start Message Section */
+.start-message {
+  text-align: center;
+  padding: 30px;
+  background-color: #ff6f61;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.start-message p {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.start-btn {
+  padding: 10px 30px;
+  background-color: white;
+  color: #ff6f61;
+  font-size: 1.2rem;
+  border: 2px solid #ff6f61;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.start-btn:hover {
+  background-color: #ff6f61;
+  color: white;
+  transform: scale(1.05);
+}
+
+.quiz-container.blurred {
+  filter: blur(5px);
+}
+
+/* Question card */
+.question-section {
+  background: #fff;
+  border: 2px solid #ff3b3b;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.question-section p {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Options */
+.options-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-label {
+  background: #f7f7f7;
+  padding: 14px 18px;
+  border-radius: 30px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.option-label:hover {
+  background-color: #fff1f0;
+  border-color: #ff6f61;
+}
+
+.option-label input[type='radio'] {
+  transform: scale(1.2);
+}
+
+/* Timer and Next Button Styles */
+.timer-and-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  gap: 5px; /* Space between timer and next button */
+}
+
+.timer, .next-btn {
+  font-size: 1.1em; /* Reduced font size for a smaller look */
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px; /* Adjusted padding for buttons */
+  border-radius: 25px;
+  min-width: 100px; /* Slightly increased width */
+  height: 30px; /* Uniform height for both buttons */
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Timer button styling before timer starts */
+.timer {
+  background-color: #fff;  /* White background before timer starts */
+  border: 2px solid #FF6F61; /* Orange border before timer starts */
+  color: #FF6F61;  /* Orange color text */
+}
+
+.timer.started {
+  background-color: #FF6F61;  /* Orange background after timer starts */
+  border: 2px solid #FF6F61; /* Same orange border */
+  color: white;  /* White text when timer starts */
+}
+
+.timer::before {
+  content: '⏱️';
+  margin-right: 8px;
+}
+
+/* Next button - starts with default styling */
+.next-btn {
+  background-color:#FF6F61 ;  /* White background for the next button */
+  border: 2px solid #FF6F61; /* Orange border */
+  color: white ; /* Orange text color */
+}
+
+.next-btn.started {
+  background-color: #FF6F61;  /* Orange background after timer starts */
+  border: 2px solid #FF6F61; /* Same orange border */
+  color: white;  /* White text when active */
+}
+
+/* Hover effect */
+.timer:hover, .next-btn:hover {
+  background-color: #ff4f42;  /* Change background color on hover */
+  border-color: #ff4f42; /* Change border color on hover */
+  color: white; /* Change text color on hover */
+  transform: scale(1.05); /* Slight hover effect */
+}
+
+/* Popup styles */
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.popup-content {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #222;
+  position: relative;
+}
+
+.popup-content .close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.start-message {
+  text-align: center;
+  padding: 50px 30px;
+  background: linear-gradient(135deg, #ff5e3a, #ff784e); /* Bolder elegant orange gradient */
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 0.6s ease-out;
+  max-width: 520px;
+  margin: 80px auto;
+  transition: all 0.3s ease;
+}
+
+.start-message p {
+  font-size: 2.3rem;
+  color: #fff;
+  font-weight: 900;
+  margin-bottom: 25px;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+.start-btn {
+  padding: 14px 36px;
+  background-color: #fff;
+  color: #ff5e3a;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: #ff5e3a;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}

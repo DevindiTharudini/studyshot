@@ -1,0 +1,178 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 40px;  /* Adjusted padding for the navbar */
+  background-color: #ffffff;  /* Removed ash background */
+  height: 48px; /* Reduced height */
+  position: fixed;  /* Fixed the navbar at the top */
+  top: 0;  /* Keeps the navbar at the top */
+  left: 0;  /* Keeps the navbar aligned to the left */
+  width: 100%;  /* Ensure the navbar spans the full width */
+  z-index: 1000; /* Ensure the navbar stays above other content */
+
+  /* Faded Ash-colored Frame and Drop Shadow */
+  border: 1px solid #d3d3d3;  /* Ash-colored border around the navbar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow for navbar */
+  border-radius: 5px;  /* Optional: Rounded corners for a modern look */
+  padding-right: 60px; /* Added more space at the end of the navbar */
+}
+
+/* Adjust logo and navbar elements */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;  /* Adjust space between logo and text */
+}
+
+.logo-img {
+  width: 40px;  /* Adjust the size of the logo */
+  height: auto;
+}
+
+.logo h2 {
+  color: #e53935; /* Red color for logo text */
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+/* Style for "STUDY" and "SHOT" */
+.study-text {
+  color: black; /* Color for "STUDY" */
+}
+
+.shot-text {
+  color: #EE1D52; /* Red color for "SHOT" */
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;  /* Evenly distribute the navigation links */
+  gap: 30px;  /* Space between the navigation links */
+  margin: 0;
+  padding: 0;
+  width: 50%;  /* Allow space for other content on the right */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #4e4e4e; /* Default color for links */
+  font-size: 1em;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #e53935;  /* Red color on hover */
+}
+
+/* Buttons (Login & Register) */
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+  margin-left: 0; /* Reset any margin */
+  margin-right: 40px; /* Added margin-right to give space between buttons and navbar edge */
+}
+
+/* Login Button */
+.login-button,
+.register-button {
+  padding: 6px 14px;  /* Reduced padding for smaller buttons */
+  font-size: 0.9em;  /* Smaller font size */
+  border: 2px solid #4e4e4e;
+  border-radius: 25px; /* Rounding the buttons to make them circular */
+  cursor: pointer;
+  min-width: 100px;  /* Ensuring button width is enough for text */
+  text-align: center; /* Ensuring text inside buttons is aligned */
+  background: #ffffff;  /* White background for buttons */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+}
+
+.login-button {
+  color: #4e4e4e;
+}
+
+.register-button {
+  background-color: #e98c8c;
+  color: white;
+}
+
+.login-button:hover {
+  background-color: #e53935;
+  color: white;
+}
+
+.register-button:hover {
+  background-color: #c62828;
+  color: white;
+}
+
+/* Main content spacing to prevent overlap with fixed navbar */
+.main-content {
+  margin-top: 70px; /* Added margin-top to prevent content overlap with fixed navbar */
+}
+
+/* Modal overlay with blur and dim background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+/* Modal content box */
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  z-index: 1000;
+  width: 320px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.confirm-btn, .cancel-btn {
+  padding: 8px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.confirm-btn {
+  background-color: #FF4F42;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #ddd;
+  color: #333;
+}
+
+.confirm-btn:hover {
+  background-color: #e04339;
+}
+
+.cancel-btn:hover {
+  background-color: #ccc;
+}

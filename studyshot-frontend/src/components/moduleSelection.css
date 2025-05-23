@@ -1,0 +1,146 @@
+/* General styles for the module selection page */
+.module-selection-page {
+  padding: 60px 30px;
+  background: linear-gradient(135deg, #fffbe6, #ffe6f0);
+  min-height: 100vh;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Module list layout */
+.module-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Module card styling with orange-pink shade */
+.module-card {
+  background: linear-gradient(135deg, #ffe6e6, #fff0cc); /* light pink to soft orange */
+  padding: 30px 25px;
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(255, 153, 153, 0.15); /* subtle pinkish shadow */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  border: 2px solid transparent;
+}
+
+.module-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 14px 30px rgba(255, 102, 102, 0.25); /* deeper pinkish shadow */
+  border-color: #ff6f61;
+}
+
+.module-card h3 {
+  font-size: 1.7em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.module-card p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Selected card */
+.module-card.selected {
+  background-color: #FF6F61;
+  color: white;
+}
+
+.module-card.selected h3,
+.module-card.selected p {
+  color: white;
+}
+
+.selected-badge {
+  background-color: #FF6F61;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 1.1em;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* Banner */
+.module-banner {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  padding: 20px 30px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeInBanner 1s ease forwards;
+}
+
+/* Banner content layout: image left, text right */
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+/* Text in banner */
+.banner-content-text {
+  flex: 1;
+}
+
+.banner-content-text h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.banner-content-text p {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Image */
+.banner-image {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation */
+@keyframes fadeInBanner {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner-image {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .banner-content-text h1 {
+    font-size: 2em;
+  }
+
+  .banner-content-text p {
+    font-size: 1em;
+  }
+}

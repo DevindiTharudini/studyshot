@@ -1,0 +1,74 @@
+/* User Feedback Page Styling */
+.feedback-container {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .feedback-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feedback-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .feedback-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .feedback-form input,
+  .feedback-form select,
+  .feedback-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .feedback-form textarea {
+    resize: vertical;
+  }
+  
+  .feedback-form .cta-button {
+    background: linear-gradient(45deg, #FF6F61, #FF4F42, #FF3B2D);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    text-transform: uppercase;
+  }
+  
+  .feedback-form .cta-button:hover {
+    background: linear-gradient(45deg, #FF4F42, #FF6F61, #FF3B2D);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+  }
+  
+  .feedback-form .cta-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
